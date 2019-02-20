@@ -1,0 +1,118 @@
+.waiting img {
+  width: 180px;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.waiting .primary {
+  margin-right: 1rem;
+}
+
+.waiting .external {
+  margin-left: 1rem;
+  box-shadow: none;
+}
+
+.waiting>span {
+  background-color: var(--blue-accent-3);
+  border-radius: 100%;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  -webkit-animation: bounce 1.4s infinite ease-in-out both;
+  animation: bounce 1.4s infinite ease-in-out both;
+  position: relative;
+  top: 4px;
+}
+
+.waiting i {
+  position: relative;
+  /* background-color: var(--light); */
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  text-align: center;
+  padding: 0.45rem 0;
+  background-color: var(--success);
+  box-shadow: 0 0.05rem 0.25rem rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.waiting i:before {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 2px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-left: 15px solid var(--orange);
+  border-right: 15px solid var(--success);
+  box-sizing: content-box;
+}
+
+.waiting i:after {
+  content: "\f00c"
+}
+
+.waiting i.fa-times:after {
+  content: "\f00d";
+}
+
+.waiting>span:nth-child(2) {
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+.waiting>span:nth-child(3) {
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s;
+}
+
+.waiting>span:nth-child(4) {
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
+}
+
+.waiting>span:nth-child(5) {
+  -webkit-animation-delay: .8s;
+  animation-delay: .8s;
+}
+
+.waiting.qb>span._1 {
+  background-color: #0199E2;
+}
+
+.waiting.qb>span._2 {
+  background-color: #069AC1;
+}
+
+.waiting.qb>span._3 {
+  background-color: #0D9C92;
+}
+
+.waiting.qb>span._4 {
+  background-color: #23A108;
+}
+
+@-webkit-keyframes bounce {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+  }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+  }
+}
