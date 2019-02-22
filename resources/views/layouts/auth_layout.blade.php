@@ -55,6 +55,8 @@
     <span class="circle-style circle-6-child"></span>
     <span class="circle-style circle-7-child"></span>
     <span class="circle-style circle-8-child"></span>
+    <span class="circle-style circle-9-child"></span>
+    <span class="circle-style circle-10-child"></span>
     <div class="login-panel">
       <div class="login-logo">
         <img class="sidebar-logo" src="{{ asset('/img/logo.png') }}" />

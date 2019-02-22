@@ -5,7 +5,8 @@
 /*AUTH LAYOUT CSS*/
 
 .bg-gradient-default {
-    background: linear-gradient(87deg,#172b4d 0,#1a174d 100%)!important;
+    //background: linear-gradient(87deg,#172b4d 0,#1a174d 100%)!important;
+    background: linear-gradient(150deg,#281483 15%,#8f6ed5 70%,#d782d9 94%);
 }
 .circle-style{
 	width: 120px;
@@ -16,26 +17,32 @@
 
 .circle-1-child {
 	bottom: auto;
-	left: -4%;
-	background: rgba(255,255,255,.1);
+    left: -4%;
+    background: rgba(255,255,255,.1);
 }
 
 .circle-2-child {
 	top: 10%;
 	right: 4%;
 	background: rgba(255,255,255,.1);
+	width: 50px;
+    height: 50px;
 }
 
 .circle-3-child {
 	top: 280px;
-	right: 5.66666%;
-	background: rgba(255,255,255,.3);
+    right: 5.66666%;
+    background: rgba(255,255,255,.3);
+    width: 50px;
+    height: 50px;
 }  
 
 .circle-4-child {
     top: 320px;
     right: 7%;
     background: rgba(255,255,255,.15);
+    width: 75px;
+    height: 75px;
 }
 
 .circle-5-child {
@@ -43,6 +50,8 @@
     right: auto;
     left: 1%;
     background: rgba(255,255,255,.05);
+    width: 100px;
+    height: 100px;
 }
 
 .circle-6-child {
@@ -58,10 +67,31 @@
     right: 36%;
     bottom: 50%;
     background: rgba(255,255,255,.04);
+    width: 50px;
+    height: 50px;
 }
 
 .circle-8-child {
 	right: 28%;
 	bottom: 10px;
 	background: rgba(255,255,255,.2);
+	width: 100px;
+    height: 100px;
+}
+
+.circle-9-child{
+	right: 2%;
+    bottom: 1%;
+    background: rgba(255,255,255,.1);
+    width: 50px;
+    height: 50px;
+}
+
+.circle-10-child{
+	right: auto;
+    bottom: 1%;
+    left: 1%;
+    background: rgba(255,255,255,.05);
+    width: 100px;
+    height: 100px;
 }
