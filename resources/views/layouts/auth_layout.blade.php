@@ -59,7 +59,7 @@
     <span class="circle-style circle-10-child"></span>
     <div class="login-panel">
       <div class="login-logo">
-        <img class="sidebar-logo" src="{{ asset('/img/logo.png') }}" />
+        <img class="sidebar-logo" src="{{ asset('/img/logo.png') }}" width ="80%"/>
       </div>
         @yield('content')
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
