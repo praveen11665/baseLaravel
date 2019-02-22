@@ -230,7 +230,8 @@ clip-path: polygon(100% 0, 80% 0, 50% 50%, 80% 100%, 100% 100%);
 
 .sidebar-user-image {
   float: left;
-  width: 50px;
+  width: 40px;
+  //width: 50px;
   border-radius: 100%;
   overflow: hidden;
   /* box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5); */

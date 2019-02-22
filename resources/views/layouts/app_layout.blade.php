@@ -89,8 +89,8 @@
         </li>
 
         <li class="active">
-          <a href="{{ route('home') }}" data-toggle="tooltip" title="Home">
-            <i class="fas fa-home fa-fw mr-1"></i> Home
+          <a href="{{ route('home') }}" data-toggle="tooltip" title="Dashboard">
+            <i class="fas fa-home fa-fw mr-1"></i> Dashboard
           </a>
         </li>
         
@@ -116,7 +116,7 @@
         <div class="float-left">
           <i class="fas fa-bars menu-toggle"></i>
           <div class="header-title">
-            {{ isset($global_page_title) ? $global_page_title : 'Home' }}
+            {{ isset($global_page_title) ? $global_page_title : 'Dashboard' }}
           </div>
         </div>
         <div class="float-right">
