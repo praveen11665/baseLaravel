@@ -22,9 +22,8 @@
             <input id="password" type="password" name="password" class="login-control" />
             <!--<a class="login-forgot-link" href="#">Forgot Password?</a>-->
           </div>
-
-          <div class="login-control-group text-let">
-            <button type="submit" class="btn btn-primary" id="btnLogin">Login</button>
+          <div class="login-control-group">
+            <button type="submit" class="btn btn-block btn-outline-primary" id="btnLogin">Login</button>
             <!--<a class="login-forgot-link float-right" href="#">Help</a>-->
           </div>
           <div class="text-center section-or">

@@ -24,12 +24,12 @@
 
                     <div class="login-control-group">
                         <label>{{ __('Password') }}</label>
-                            <input id="password" type="password" class="login-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required onkeyup="CheckPasswordStrength(this.value)">
-                            <br>
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <span id="password_strength"></span>
+                        <input id="password" type="password" class="login-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required onkeyup="CheckPasswordStrength(this.value)">
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <span id="password_strength"></span>
                     </div> 
 
                     <div class="login-control-group">
@@ -38,7 +38,7 @@
                     </div> 
 
                     <div class="login-control-group text-center">
-                        <button type="submit" class="btn btn-primary">{{ __('Register') }}</button>
+                        <button type="submit" class="btn btn-block btn-outline-primary">{{ __('Register') }}</button>
                     </div>
                 </form>
             </div>

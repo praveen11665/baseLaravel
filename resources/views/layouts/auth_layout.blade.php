@@ -28,6 +28,8 @@
   <link href="{{ asset('/css/strawberry.login.css') }}" rel="stylesheet" />
   <script src="{{ asset('/js/views/login.js') }}"></script>
 
+  <link href="{{ asset('/css/custom.css') }}" rel="stylesheet" />
+
   <script type="text/javascript">
     //Globally Set Web URL
     var l      = window.location;
@@ -44,7 +46,15 @@
   </script>
 </head>
 <body>
-  <div class="login-wrapper">
+  <div class="login-wrapper bg-gradient-default">
+    <span class="circle-style circle-1-child"></span>
+    <span class="circle-style circle-2-child"></span>
+    <span class="circle-style circle-3-child"></span>
+    <span class="circle-style circle-4-child"></span>
+    <span class="circle-style circle-5-child"></span>
+    <span class="circle-style circle-6-child"></span>
+    <span class="circle-style circle-7-child"></span>
+    <span class="circle-style circle-8-child"></span>
     <div class="login-panel">
       <div class="login-logo">
         <img class="sidebar-logo" src="{{ asset('/img/logo.png') }}" />

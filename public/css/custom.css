@@ -1,3 +1,67 @@
 .rw-style, #removeLogo{
-  cursor: pointer !important;
+ 	cursor: pointer !important;
+}
+
+/*AUTH LAYOUT CSS*/
+
+.bg-gradient-default {
+    background: linear-gradient(87deg,#172b4d 0,#1a174d 100%)!important;
+}
+.circle-style{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	position: absolute;
+ }
+
+.circle-1-child {
+	bottom: auto;
+	left: -4%;
+	background: rgba(255,255,255,.1);
+}
+
+.circle-2-child {
+	top: 10%;
+	right: 4%;
+	background: rgba(255,255,255,.1);
+}
+
+.circle-3-child {
+	top: 280px;
+	right: 5.66666%;
+	background: rgba(255,255,255,.3);
+}  
+
+.circle-4-child {
+    top: 320px;
+    right: 7%;
+    background: rgba(255,255,255,.15);
+}
+
+.circle-5-child {
+    top: 38%;
+    right: auto;
+    left: 1%;
+    background: rgba(255,255,255,.05);
+}
+
+.circle-6-child {
+    top: 44%;
+    right: auto;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,.15);
+}
+
+.circle-7-child {
+    right: 36%;
+    bottom: 50%;
+    background: rgba(255,255,255,.04);
+}
+
+.circle-8-child {
+	right: 28%;
+	bottom: 10px;
+	background: rgba(255,255,255,.2);
 }
