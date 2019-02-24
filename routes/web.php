@@ -20,4 +20,7 @@ Auth::routes(['verify' => true]);
 
 Route::group(['middleware' => ['web', 'auth']], function () {
 	Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+
+	//Users Management
+	Route::get('/user', 'UserController@index')->name('user');
 });

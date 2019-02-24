@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>Project Name</title>
+
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="{{ asset('/img/favicon.png') }}">
 
   <!-- Animate.CSS CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
@@ -50,6 +53,10 @@
   <!-- Strawberry JS - JONES -->
   <script src="{{ asset('/js/strawberry.core.js') }}"></script>
   <script src="{{ asset('/js/strawberry.js') }}"></script>
+
+  <!--DATATABLES-->
+  <link href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <script src="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> 
 
   <script type="text/javascript">
    //Globally Set Web URL
@@ -101,7 +108,7 @@
               <span class="fas fa-caret-right float-right"></span>
             </a>
             <div class="submenu" id="ddAcc" data-parent=".sidebar-nav">
-              <a class="submenu-item" href="#" data-workspace-src="dummy" data-title="404 - SmartBooks" data-page-header="Redirect">User Management</a>
+              <a class="submenu-item" href="{{ route('user')}}" data-workspace-src="dummy" data-title="404 - SmartBooks" data-page-header="Redirect">User Management</a>
               <a class="submenu-item" href="#" data-workspace-src="dummy" data-title="404 - SmartBooks" data-page-header="Redirect">Role Management</a>
             </div>
           </div>
@@ -116,14 +123,14 @@
         <div class="float-left">
           <i class="fas fa-bars menu-toggle"></i>
           <div class="header-title">
-            {{ isset($global_page_title) ? $global_page_title : 'Dashboard' }}
+            {{ isset($global_page_title) ? $global_page_title : 'Project Name' }}
           </div>
         </div>
         <div class="float-right">
           <span class="align-items-center d-md-flex d-none justify-content-center">
             <div class="dropdown d-none d-md-inline-block dropdown-company-change">
-              <button id="btnGroupDrop3" type="button" class="btn btn-warning btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">      
-                Hi, <span class="global_company_name">{{ ucfirst(Auth::user()->name) }}</span> </button>
+              <button id="btnGroupDrop3" type="button" class="btn btn-warning btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="user-greeting" ><i class="fas fa-cloud-sun"></i>
+                Good Morning, </span><span class="global_company_name">{{ ucfirst(Auth::user()->name) }}</span> </button>
             </div> 
 
             <!--Logout Form-->
@@ -164,6 +171,26 @@
   <!--Script Files-->
   <script type="text/javascript"> 
     $(document).ready(function(){
+
+      //User Time Greeting
+      const date = new Date;
+      let hours  = date.getHours();
+
+      if(hours >= 5 && hours <= 12)
+      {
+        $('.user-greeting').html('<i class="fas fa-sun"></i> Good Morning, ');
+        status = 'Good Morning';
+      }else if(hours > 12 && hours <= 17)
+      {
+        $('.user-greeting').html('<i class="fas fa-sun"></i> Good Afternoon, ');
+      }else if(hours > 17 && hours <= 20)
+      {
+        $('.user-greeting').html('<i class="fas fa-cloud-sun"></i> Good Evening, ');
+      }else
+      {
+        $('.user-greeting').html('Hi, ');
+      }      
+
       var sidebar_height = $('#sidebar-wrapper').innerHeight();
 
       if($('#sidebar-wrapper').find('.active').length > 0){

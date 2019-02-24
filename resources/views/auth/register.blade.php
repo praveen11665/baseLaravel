@@ -38,7 +38,7 @@
                     </div> 
 
                     <div class="login-control-group text-center">
-                        <button type="submit" class="btn btn-block btn-outline-primary">{{ __('Register') }}</button>
+                        <button type="submit" class="btn btn-block btn-outline-info">{{ __('Register') }}</button>
                     </div>
                 </form>
             </div>

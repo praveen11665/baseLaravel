@@ -42,7 +42,8 @@
 }
 
 .login-control:focus {
-  box-shadow: 0px 0px 10px 0px rgba(40, 150, 250, 0.5);
+  //box-shadow: 0px 0px 10px 0px rgba(40, 150, 250, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(40, 20, 131);
 }
 
 .login-button {

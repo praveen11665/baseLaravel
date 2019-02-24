@@ -1,42 +1,8 @@
 @extends('layouts.app_layout')
 
-@section('content')
-	<style type="text/css">
-		.col-auto {
-    width: auto;
-    max-width: none;
-    flex: 0 0 auto;
-    padding: 0px;
-}
+@section('content')	
+    <h6 class="element-header">Dashboard</h6>
 
-.icon-shape {
-    display: inline-flex;
-    padding: 12px;
-    text-align: center;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-}
-.icon {
-    width: 3rem;
-    height: 3rem;
-}
-.text-white {
-    color: #fff !important;
-}
-
-.rounded-circle {
-    border-radius: 50% !important;
-}
-.bg-warning {
-    background-color: #fb6340 !important;
-}
-
-.icon-shape svg {
-    font-size: 1.25rem;
-}
-	</style>
-    <h3>Dashboard</h3>
   	<div class="header pb-8 pt-5 pt-md-8">
     	<div class="container-fluid">
       		<div class="header-body">
@@ -47,7 +13,7 @@
                 				<div class="row">
                   					<div class="col">
 					                    <h5 class="card-title text-uppercase text-muted mb-0">Title 1</h5>
-					                    <span class="h2 font-weight-bold mb-0">20</span>
+					                    <span class="h2 font-weight-bold mb-0">100</span>
 					                 </div>
 									<div class="col-auto">
 										<div class="icon icon-shape bg-warning text-white rounded-circle shadow">
@@ -72,8 +38,8 @@
 										<span class="h2 font-weight-bold mb-0">200</span>
 									</div>
 									<div class="col-auto">
-										<div class="icon icon-shape bg-warning text-white rounded-circle shadow">
-											<i class="fas fa-clock"></i>
+										<div class="icon icon-shape bg-info text-white rounded-circle shadow">
+											<i class="fas fa-credit-card"></i>
 										</div>
 									</div>
 								</div>
@@ -94,8 +60,8 @@
 										<span class="h2 font-weight-bold mb-0">300</span>
 									</div>
 									<div class="col-auto">
-										<div class="icon icon-shape bg-info text-white rounded-circle shadow">
-											<i class="fas fa-cart-plus"></i>
+										<div class="icon icon-shape bg-green text-white rounded-circle shadow">
+											<i class="fas fa-thumbs-up"></i>
 										</div>
 									</div>
 								</div>
@@ -112,11 +78,11 @@
 							<div class="card-body">
 								<div class="row">
 									<div class="col">
-										<h5 class="card-title text-uppercase text-muted mb-0">Title 3</h5>
-										<span class="h2 font-weight-bold mb-0">300</span>
+										<h5 class="card-title text-uppercase text-muted mb-0">Title 4</h5>
+										<span class="h2 font-weight-bold mb-0">400</span>
 									</div>
 									<div class="col-auto">
-										<div class="icon icon-shape bg-info text-white rounded-circle shadow">
+										<div class="icon icon-shape bg-danger text-white rounded-circle shadow">
 											<i class="fas fa-cart-plus"></i>
 										</div>
 									</div>

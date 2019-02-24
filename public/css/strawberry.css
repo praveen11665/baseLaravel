@@ -1,6 +1,7 @@
 :root {
   --secondary-blue: #0F1941;
-  --primary-blue: rgb(0, 92, 151);
+  //--primary-blue: rgb(0, 92, 151);
+  --primary-blue: rgb(40, 20, 131);
   --navbar-bg: #f3f7f9;
   --navbar-fg: #555;
   --logo-bg: rgb(234, 234, 234);
@@ -141,8 +142,9 @@ clip-path: polygon(100% 0, 80% 0, 50% 50%, 80% 100%, 100% 100%);
 }
 
 .page-header {
-  /*padding: 10px 15px;*/
-  background-color: var(--primary-blue);
+  /*padding: 10px 15px;
+  background-color: var(--primary-blue);*/
+  background-color: #281483;
   color: #eee;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   z-index: 2;
@@ -713,7 +715,7 @@ body.spinner-spinning .spinner-backdrop {
 }
 
 .dropdown-company-change button {
-  padding: 0.45rem 1rem .45rem 2.5rem;
+  padding: 0.45rem 1rem 0.45rem 2.0rem;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
 }

@@ -95,3 +95,85 @@
     width: 100px;
     height: 100px;
 }
+
+/* User Greeting */
+.user-greeting i{
+    padding: 0px 5px;
+    font-size: 20px;
+}
+
+/* Dashboard CSS*/
+.col-auto {
+    width: auto;
+    max-width: none;
+    flex: 0 0 auto;
+    padding: 0px;
+}
+
+.icon-shape {
+    display: inline-flex;
+    padding: 12px;
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.icon {
+    width: 3rem;
+    height: 3rem;
+}
+.text-white {
+    color: #fff !important;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+.bg-warning {
+    background-color: #fb6340 !important;
+}   
+
+.icon-shape i, .icon-shape svg {
+    font-size: 1.25rem;
+}
+
+.bg-green {
+    background-color: #2dce89 !important;
+}
+
+.bg-danger {
+    background-color: #f5365c !important;
+}
+
+/*Element Wrapper*/
+.element-header{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    font-size: 1.5rem;
+}
+
+.element-header:after {
+    content: "";
+    background-color: #281483;
+    width: 22px;
+    height: 6px;
+    border-radius: 2px;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0px;
+} 
+
+.element-box {
+    padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
+    background: #f8f9fa;
+}
+
+.form-header {    
+    display: block;
+    font-weight: bold;   
+}
