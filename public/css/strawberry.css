@@ -483,7 +483,8 @@ fieldset[disabled] .form-group {
 
 .toast-wrapper {
   position: fixed;
-  top: 60px;
+  //top: 60px;
+  top: 40px;
   right: 5px;
   min-width: 350px;
   overflow-y: auto;

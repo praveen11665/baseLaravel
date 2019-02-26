@@ -1,14 +1,23 @@
 @extends('layouts.auth_layout')
 @section('content')
+  <style type="text/css">
+    .errorStyle{
+      color: red;
+      font-size: 16px;
+      float: center;
+      text-align: center;    
+    }
+  </style>
   <div id="loginSlider" class="carousel slide">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <form method="POST" action="{{ route('login') }}">
           @csrf               
           @if ($errors->any())
-            <div class="alert alert-danger" id="lblError">
+            <!-- <div class="alert alert-danger" id="lblError">
               <span class="text">Incorrect email or password</span>
-            </div>
+            </div> -->
+            <div class="toast show animated fadeInRight shadow-lg border-danger fade" role="alert" aria-live="assertive" aria-atomic="true"><div class="toast-body errorStyle">Incorrect email or password</div></div>
           @endif
           <!-- Login Panel -->
           <div class="login-control-group">
@@ -40,12 +49,12 @@
         </form>
       </div>
 
-      <div class="carousel-item">
+      <!-- <div class="carousel-item">
         <div class="slide-spinner" style="height:350px;">
           <span></span>
           <div class="text-center">Please wait while we log you in</div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div> 
 @endsection

@@ -177,3 +177,30 @@
     display: block;
     font-weight: bold;   
 }
+
+/*ADD NEW BUTTON*/
+
+.btn-add-new {
+    position: relative;
+    right: 1rem;  
+    font-size: 17px; 
+    top : 10px;
+    border-radius: 15px;
+    padding: 0.25rem 1.5rem;
+    color: #281483;
+    border-color: #281483;
+}
+    
+.btn-add-new:hover, .btn-add-new:active, .btn-add-new:visited {
+    background-color: #281483 !important;
+}
+
+.help-block{
+    color: red !important;
+}
+
+.form-buttons{
+    float: right !important;
+}
+
+/**** TABLES *****/

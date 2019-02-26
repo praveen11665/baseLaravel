@@ -23,4 +23,14 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 
 	//Users Management
 	Route::get('/user', 'UserController@index')->name('user');
+
+	//Role
+	Route::get('/role', 'RoleController@index')->name('role');
+	/*Route::get('/role/form', 'RoleController@ajaxFormView')->name('role_form');*/
+
+	Route::match(['GET', 'POST'], '/role/form', [
+    	'uses' => 'RoleController@ajaxFormView'
+	])->name('role_form');
+	
+	Route::get('role/delete/{id}', 'RoleController@delete')->name('delete_role');	
 });

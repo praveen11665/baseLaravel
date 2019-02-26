@@ -1,5 +1,13 @@
 @extends('layouts.auth_layout')
 @section('content')
+    <style type="text/css">
+        .errorStyle{
+          color: red;
+          font-size: 16px;
+          float: center;
+          text-align: center;    
+        }
+    </style>
     <div class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -7,9 +15,10 @@
                     @csrf
 
                     @if ($errors->any())
-                        <div class="alert alert-danger" id="lblError">
+                        <!-- <div class="alert alert-danger" id="lblError">
                           <span class="text">{{ $errors->first() }}</span>
-                        </div>
+                        </div> -->
+                        <div class="toast show animated fadeInRight shadow-lg border-danger fade" role="alert" aria-live="assertive" aria-atomic="true"><div class="toast-body errorStyle">{{ $errors->first() }}</div></div>
                     @endif
 
                     <div class="login-control-group">

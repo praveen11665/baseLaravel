@@ -108,8 +108,8 @@
               <span class="fas fa-caret-right float-right"></span>
             </a>
             <div class="submenu" id="ddAcc" data-parent=".sidebar-nav">
+              <a class="submenu-item" href="{{ route('role')}}" data-workspace-src="dummy" data-title="404 - SmartBooks" data-page-header="Redirect">Role Management</a>
               <a class="submenu-item" href="{{ route('user')}}" data-workspace-src="dummy" data-title="404 - SmartBooks" data-page-header="Redirect">User Management</a>
-              <a class="submenu-item" href="#" data-workspace-src="dummy" data-title="404 - SmartBooks" data-page-header="Redirect">Role Management</a>
             </div>
           </div>
         </li>
@@ -168,40 +168,21 @@
   </div>
   <!--/ Wrapper -->
 
-  <!--Script Files-->
-  <script type="text/javascript"> 
-    $(document).ready(function(){
-
-      //User Time Greeting
-      const date = new Date;
-      let hours  = date.getHours();
-
-      if(hours >= 5 && hours <= 12)
-      {
-        $('.user-greeting').html('<i class="fas fa-sun"></i> Good Morning, ');
-        status = 'Good Morning';
-      }else if(hours > 12 && hours <= 17)
-      {
-        $('.user-greeting').html('<i class="fas fa-sun"></i> Good Afternoon, ');
-      }else if(hours > 17 && hours <= 20)
-      {
-        $('.user-greeting').html('<i class="fas fa-cloud-sun"></i> Good Evening, ');
-      }else
-      {
-        $('.user-greeting').html('Hi, ');
-      }      
-
-      var sidebar_height = $('#sidebar-wrapper').innerHeight();
-
-      if($('#sidebar-wrapper').find('.active').length > 0){
-            var menu_active_height = $('#sidebar-wrapper').find('.active').offset().top + $('#sidebar-wrapper').find('.active').innerHeight();
-      
-            if(menu_active_height > sidebar_height){
-              console.log($('#sidebar-wrapper').find('.active').offset().top)
-              $('#sidebar-wrapper').scrollTop($('#sidebar-wrapper').find('.active').offset().top);
-            }
-      }
-    })    
-  </script>
+  <!-- MODAL WINDOW Add New content-->
+  <div class="modal fade" id="form-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close btn-danger" data-dismiss="modal">&times;</button>   
+          <h4 class="modal-title" style="position: absolute;">{{ isset($model_title) ? $model_title : 'TITLE' }}</h4>
+        </div>
+        <div class="modal-body" id="form-modal-body">
+        </div>        
+      </div>
+    </div>
+  </div>
+    
+  <aside class="toast-wrapper"></aside>
+  @php(require_once(base_path().'\resources\views\common_js.blade.php'))
 </body>
 </html>
