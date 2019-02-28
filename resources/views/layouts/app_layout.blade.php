@@ -154,13 +154,9 @@
         </div>
       </div>
       <div class="workspace p-4" id="workspace">
-        <?php
-        /*
           <div class="breadcrumb-wrapper" aria-label="Breadcrumb">
             {{ Breadcrumbs::render(Route::getCurrentRoute()->getName()) }}
           </div>
-        */
-        ?>
         @yield('content')
       </div>
     </div>
