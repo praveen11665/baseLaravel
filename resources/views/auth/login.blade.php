@@ -36,25 +36,15 @@
             <!--<a class="login-forgot-link float-right" href="#">Help</a>-->
           </div>
           <div class="text-center section-or">
-            <span>
-              OR
-            </span>
+            <span>OR</span>
           </div>
 
-          <div style="margin-left:-25px;margin-right:-25px;" class="py-3 text-center">
-            <button class="btn btn-light rounded mb-1 shadow-sm" title="Coming Soon" style="cursor: not-allowed;" onclick="return false">
-              <img src="{{ asset('/img/btn_google_light_normal_ios.svg') }}" /> Sign in with Google
-            </button>
+          <div class="social-media">
+              <a href="{!! url('auth/facebook') !!}"><i class="fab fa-facebook-f"></i></a>
+              <a href="{!! url('auth/google') !!}"><i class="fab fa-google"></i></a>
           </div>
         </form>
       </div>
-
-      <!-- <div class="carousel-item">
-        <div class="slide-spinner" style="height:350px;">
-          <span></span>
-          <div class="text-center">Please wait while we log you in</div>
-        </div>
-      </div> -->
     </div>
   </div> 
 @endsection

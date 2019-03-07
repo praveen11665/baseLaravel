@@ -203,4 +203,87 @@
     float: right !important;
 }
 
-/**** TABLES *****/
+/***** SOCIAL BUTTON *****/
+
+.social-media-wrapper{
+    position: absolute;
+    bottom: 50px;
+    right: 50%;
+    left: 50;
+}
+
+.social-media{
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    left: 48%;*/
+    position: relative;
+    display: flex;
+    left: 32%;
+    bottom: -4px;
+}
+
+.social-media a .fab {
+    font-size: 24px;
+    line-height: 40px;
+    color: #000;
+}
+
+.social-media a{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    text-align: center;
+    background: rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.social-media a:before{
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 3px;
+    width: 100%;
+    height: 10%;
+    background: rgba(0,0,0,0.5);
+    transform: skewX(-45deg);
+}
+
+.social-media a:after{
+    content: '';
+    position: absolute;
+    top: -2.5px;
+    left: 40px;
+    width: 10%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    transform: skewY(-45deg);
+}
+
+.social-media a:hover{
+    transform: translate(-10%,10%);
+    box-shadow: 10px 0 35px #000;
+    transition: 0.3s;  
+    color: #fff !important;        
+}    
+
+.social-media a:nth-child(1):hover{
+    background: #3b5998;
+}
+.social-media a:nth-child(1):hover .fab{
+    color: #fff;
+}
+
+.social-media a:nth-child(2):hover{
+    background: #cd201f;
+}
+.social-media a:nth-child(2):hover .fab{
+    color: #fff;
+}
+
+.btn{
+    border-radius: 50rem !important;
+}

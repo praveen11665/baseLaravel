@@ -50,7 +50,7 @@
 </head>
 <body>
   <div class="login-wrapper bg-gradient-default">
-    <span class="circle-style circle-1-child"></span>
+   <span class="circle-style circle-1-child"></span>
     <span class="circle-style circle-2-child"></span>
     <span class="circle-style circle-3-child"></span>
     <span class="circle-style circle-4-child"></span>
@@ -69,9 +69,12 @@
           @csrf
         </form>
     </div>
-   <!--  <div class="login-footer-panel">
-      <a href="#">Terms & Conditions</a>
-      <a href="#">Privacy Policy</a>
+
+   <!-- <div class="social-media-wrapper">
+      <div class="social-media">
+        <a href="{!! url('auth/facebook') !!}"><i class="fab fa-facebook-f"></i></a>
+        <a href="{!! url('auth/google') !!}"><i class="fab fa-google"></i></a>
+      </div>
     </div> -->
   </div>
 </body>

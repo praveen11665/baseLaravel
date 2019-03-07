@@ -800,11 +800,12 @@ body.spinner-spinning .spinner-backdrop {
   width: 10px;
   animation-delay: .3s;
   background-color: red;
-  -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
-  clip-path: polygon(0 0, 0 100%, 100% 0);
+  border-radius: 50%;
+  /* -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+  clip-path: polygon(0 0, 0 100%, 100% 0); */
   pointer-events: none;
-  left: 1px;
-  top: 1px;
+  left: -2px;
+  top: -2px;
   opacity: 1;
   animation: fadeIn 1s ease infinite;
 }

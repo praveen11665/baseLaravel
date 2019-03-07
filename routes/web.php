@@ -11,6 +11,14 @@
 |
 */
 
+//Facebook
+Route::get('auth/facebook', 'Auth\LoginController@redirectToFacebook');
+Route::get('auth/facebook/callback', 'Auth\LoginController@handleFacebookCallback');
+
+//Google
+Route::get('auth/google', 'Auth\LoginController@redirectToGoogle');
+Route::get('auth/google/callback', 'Auth\LoginController@handleGoogleCallback');
+
 Route::get('/', function () {
     //return view('welcome');
     return redirect('/login');
