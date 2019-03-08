@@ -1,13 +1,5 @@
 @extends('layouts.auth_layout')
-@section('content')
-    <style type="text/css">
-        .errorStyle{
-          color: red;
-          font-size: 16px;
-          float: center;
-          text-align: center;    
-        }
-    </style>
+@section('content')    
     <div class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -47,7 +39,7 @@
                     </div> 
 
                     <div class="login-control-group text-center">
-                        <button type="submit" class="btn btn-block btn-outline-info">{{ __('Register') }}</button>
+                        <button type="submit" class="btn btn-outline-info"  style="width: 100px;">{{ __('Register') }}</button>
                     </div>
                 </form>
             </div>

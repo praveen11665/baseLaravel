@@ -1,7 +1,12 @@
 @extends('layouts.app_layout')
 
 @section('content')	
-<h6 class="element-header">User Management</h6>
+<h4 class="mt-0 border-bottom border-info border-2">
+  User Management
+  <button class="btn btn-sm btn-info float-right" onclick="">
+    <i class="fa fa-plus"></i> New
+  </button>
+</h4>
 <div class="row">
 	<div class="col-md-12">
 		<div class="element-box">
@@ -49,6 +54,5 @@
 			// body...
 		}
 	}
-
 </script>
 @endsection

@@ -1,16 +1,22 @@
 @extends('layouts.app_layout')
 
 @section('content')	
-<button class="btn btn-outline-primary float-right btn-add-new" onclick="addNewPop('{{route("role_form")}}')"><i class="fa fa-plus"></i>  New</button>
+<!-- <button class="btn btn-outline-primary float-right btn-add-new" onclick="addNewPop('{{route("role_form")}}')"><i class="fa fa-plus"></i>  New</button>
 <div class="row">
 	<div class="col-md-12">
 		<h6 class="element-header">Role Management</h6>		
 	</div>
-</div>
+</div> -->
+<h4 class="mt-0 border-bottom border-info border-2">
+  Role Management
+  <button class="btn btn-sm btn-info float-right" onclick="addNewPop('{{route("role_form")}}')">
+    <i class="fa fa-plus"></i> New
+  </button>
+</h4>
 <div class="row">
 	<div class="col-md-12">
 		<div class="element-box">
-			<h5 class="form-header">Role List</h5><hr>
+			<h5 class="mt-0 border-2">Role List</h5><hr>			
 			<table class="table table-hover table-bordered" id="dataTable">
 				<thead>
 					<tr>

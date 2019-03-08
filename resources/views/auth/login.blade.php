@@ -1,13 +1,5 @@
 @extends('layouts.auth_layout')
 @section('content')
-  <style type="text/css">
-    .errorStyle{
-      color: red;
-      font-size: 16px;
-      float: center;
-      text-align: center;    
-    }
-  </style>
   <div id="loginSlider" class="carousel slide">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -31,8 +23,8 @@
             <input id="password" type="password" name="password" class="login-control" />
             <!--<a class="login-forgot-link" href="#">Forgot Password?</a>-->
           </div>
-          <div class="login-control-group">
-            <button type="submit" class="btn btn-block btn-outline-info" id="btnLogin">Login</button>
+          <div class="login-control-group text-center">
+            <button type="submit" class="btn btn-outline-info" id="btnLogin" style="width: 100px;">Login</button>
             <!--<a class="login-forgot-link float-right" href="#">Help</a>-->
           </div>
           <div class="text-center section-or">
