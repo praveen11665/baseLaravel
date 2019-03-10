@@ -20,7 +20,6 @@ Route::get('auth/google', 'Auth\LoginController@redirectToGoogle');
 Route::get('auth/google/callback', 'Auth\LoginController@handleGoogleCallback');
 
 Route::get('/', function () {
-    //return view('welcome');
     return redirect('/login');
 });
 
@@ -32,9 +31,14 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 	//Users Management
 	Route::get('/user', 'UserController@index')->name('user');
 
+	Route::match(['GET', 'POST'], '/user/form', [
+    	'uses' => 'UserController@ajaxFormView'
+	])->name('user_form');
+
+	Route::get('user/delete/{id}', 'UserController@delete')->name('delete_user');
+
 	//Role
 	Route::get('/role', 'RoleController@index')->name('role');
-	/*Route::get('/role/form', 'RoleController@ajaxFormView')->name('role_form');*/
 
 	Route::match(['GET', 'POST'], '/role/form', [
     	'uses' => 'RoleController@ajaxFormView'

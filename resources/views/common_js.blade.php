@@ -36,7 +36,7 @@
   }) 
 
   //Add new popup
-  function addNewPop(addFormUrl, pkey)
+  function addNewPop(addFormUrl, pkey, modelTitle='')
   {
     $.ajax({
     type: "GET",
@@ -47,6 +47,8 @@
         {      
           if(html1 != 'success')
           {
+            if(modelTitle)
+              $('.modal-title').text(modelTitle);
             // assigning modal title from parameter
             $("#form-modal-body").html("<p>"+html1+"</p>"); // msg in modal body
             $("#form-modal").modal("show"); // show modal instead alert box
@@ -55,7 +57,7 @@
     });
   }
 
-  function commonDeleteItem(alertTitle, alertBody, successTitle, successCls, deleteUrl) {
+  function commonDeleteItem(alertTitle, alertBody, successTitle, successCls, deleteUrl, contentUrl) {
 
     strawberry.dialog.confirm({
       title: (alertTitle) ? alertTitle : 'Delete this item',
@@ -69,7 +71,7 @@
         url: deleteUrl,
         success: function()
         {
-          location.reload();
+          loadTableData();
           strawberry.toast.show(successTitle, successCls);
         },
       });
@@ -79,42 +81,128 @@
 	// When the form is submitted
   $("#ajaxModelForm").submit(function()
   {
-    	// 'this' refers to the current submitted form 
-      /*var str       = $(this).serialize();
-      var $btn = $(document.activeElement);*/
-      event.preventDefault();
-      var actionUrl = $(this).data('action');
-      var formData  = new FormData(this); 
-      $.ajax({
-      type: "POST",
-      url: actionUrl, 
-      data: formData,
-      processData: false,
-      contentType: false,
-        success: function(html1)
+    event.preventDefault();
+    var actionUrl = $(this).data('action');
+    var formData  = new FormData(this); 
+    $.ajax({
+    type: "POST",
+    url: actionUrl, 
+    data: formData,
+    processData: false,
+    contentType: false,
+      success: function(html1)
+      {
+        try 
         {
-          try 
+          var parsedJson = JSON.parse(html1);
+          if(parsedJson.result == 'success')
           {
             var parsedJson = JSON.parse(html1);
-            if(parsedJson.result == 'success')
-            {
-              var parsedJson = JSON.parse(html1);
-              $('#form-modal').modal('hide');
-              location.reload();
+            $('#form-modal').modal('hide');
+            //location.reload();
 
-              strawberry.toast.show("Information saved sucessfully", "success");
-            }       
-          } 
-          catch(e) 
-          {
-            $("#form-modal-body").html("<p>"+html1+"</p>"); // msg in modal body
-            $("#form-modal").modal("show"); // show modal instead alert box
-          }
-        },
-      });
+            loadTableData(parsedJson.loadContentURL);
+            strawberry.toast.show("Information saved sucessfully", "success");
+          }       
+        } 
+        catch(e) 
+        {
+          $("#form-modal-body").html("<p>"+html1+"</p>"); // msg in modal body
+          $("#form-modal").modal("show"); // show modal instead alert box
+        }
+      },
+    });
   }); // end submit event 
+
+  function loadTableData(loadContentURL) {
+    $.ajax({
+              type: "GET",
+              url: loadContentURL,
+              data: {'loadContent' : 1},
+              dataType:"html",
+                  success: function(html1)
+                  { 
+                    var table = $('#dataTable').DataTable();
+                    table.destroy(); 
+
+                    $('#dataTable').html(html1);
+                    $('#dataTable').DataTable();
+                  },
+          });
+  }
 
   $('.form-control').keyup(function(){
   	$('.form_submit').addClass('btn-flash');
   })
+
+  //PASSWORD STRENGTH
+  function CheckPasswordStrength(password) {
+      var password_strength = document.getElementById("password_strength");
+
+      //TextBox left blank.
+      if (password.length == 0) {
+          password_strength.innerHTML = "";
+          $('.progress-bar').css('width', '0%'); 
+          return;
+      }
+
+      //Regular Expressions.
+      var regex = new Array();
+      regex.push("[A-Z]"); //Uppercase Alphabet.
+      regex.push("[a-z]"); //Lowercase Alphabet.
+      regex.push("[0-9]"); //Digit.
+      regex.push("[$@$!%*#?&]"); //Special Character.
+
+      var passed = 0;
+
+      //Validate for each Regular Expression.
+      for (var i = 0; i < regex.length; i++) {
+          if (new RegExp(regex[i]).test(password)) {
+              passed++;
+          }
+      }
+
+      //Validate for length of Password.
+      if (passed > 2 && password.length > 8) {
+          passed++;
+      }
+
+      //Display status.
+      var color    = "";
+      var strength = "";        
+      var progressWidth    = "0%"; 
+      switch (passed) {
+          case 0:
+          case 1:
+              strength = "Weak";
+              color    = "red";
+              progressWidth    = "20%";
+              break;
+          case 2:
+              strength = "Good";
+              color    = "darkorange";
+              progressWidth    = "50%";
+              break;
+          case 3:
+          case 4:
+              strength = "Strong";
+              color    = "green";
+              progressWidth    = "80%";
+              break;
+          case 5:
+              strength = "Very Strong";
+              color    = "darkgreen";
+              progressWidth    = "100%";
+              break;
+          default:
+              progressWidth    = "0%";
+      }
+
+      password_strength.innerHTML   = strength;
+      password_strength.style.color = color; 
+
+      //Progress Bar
+      $('.progress-bar').css('background-color', color);      
+      $('.progress-bar').css('width', progressWidth);      
+  }
 </script>

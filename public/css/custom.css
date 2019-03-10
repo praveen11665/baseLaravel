@@ -309,3 +309,50 @@
     border-bottom-left-radius: 0px !important;
     border-top-left-radius: 1rem !important;
 }
+
+.input-group>.login-control{
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+}
+
+.input-group> .input-group-append> span{
+  border-radius: 4px !important;
+  cursor: pointer;
+}
+
+.table thead{
+    background: lightyellow !important;
+
+}
+
+.table tbody tr:nth-child(even){
+    background: #f3f7f9 !important;
+}
+
+.border-bottom{
+    padding-bottom: 0.5rem;
+}
+
+.border-bottom button{
+    position: relative;
+    top: 12px;
+}
+
+.border-bottom:after {
+    content: "";
+    background-color: #281483;
+    width: 25px;
+    height: 6px;
+    display: block;
+    position: relative;
+    bottom: -9px;
+    border-radius: 2px;
+}
+
+#wrapper.toggled .breadcrumb-wrapper {
+    top: 36px;
+}

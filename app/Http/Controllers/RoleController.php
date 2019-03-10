@@ -8,12 +8,20 @@ use Validator;
 
 class RoleController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         \View::share('model_title', 'Create Role');
+        $tableData['roleData']    = Role::Where('is_delete', 0)->get();
 
-        $data['roleData'] = Role::Where('is_delete', 0)->get();
-        return view('user.role_view')->with($data);
+        $data['tableContent'] = view('user.ajax_role_table', $tableData)->render();
+
+        if($request->loadContent == 1)
+        {
+            return $data['tableContent'];
+        }
+        else{            
+            return view('user.index_role')->with($data);
+        }
     }    
 
     public function ajaxFormView(Request $request)
@@ -44,7 +52,8 @@ class RoleController extends Controller
                 }
 
                 $isFormLoad = FALSE;
-                $ajaxResponse['result']   = 'success';                
+                $ajaxResponse['result']           = 'success';
+                $ajaxResponse['loadContentURL']   =  route('role');                  
                 echo json_encode($ajaxResponse);
             }
         } 
