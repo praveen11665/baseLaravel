@@ -21,6 +21,7 @@
 				<div class="col-md-12">
 					<label>Name</label>
 					<input type="text" class="form-control" name="name" id="name" value="{{$name}}">
+					<i class="fas fa-microphone shadow" data-toggle="tooltip" title="Alert, Set up your mic for speech recognition, It's working on HTTPS and localhost" onclick="startRecognition('name')"></i>
 					<span class="help-block">{{ isset($error) ? isset($error['name']['0']) ? $error['name']['0'] :'' : '' }}</span>
 				</div>
 			</div><br>
@@ -28,6 +29,7 @@
 				<div class="col-md-12">
 					<label>Email</label>
 					<input type="email" class="form-control" name="email" id="email" value="{{$email}}" {{($user_id) ? 'readonly' : ''}}>
+					<i class="fas fa-microphone shadow" data-toggle="tooltip" title="Alert, Set up your mic for speech recognition, It's working on HTTPS and localhost" onclick="startRecognition('email')"></i>
 					<span class="help-block">{{ isset($error) ? isset($error['email']['0']) ? $error['email']['0'] :'' : '' }}</span>
 				</div>
 			</div><br>

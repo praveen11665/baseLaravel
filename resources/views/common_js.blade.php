@@ -33,6 +33,10 @@
 
       //Datatable
       $('#dataTable').DataTable();
+      $('#dataTable_filter').find('input').addClass('search-control-sm');
+      $('.dataTables_length').find('select').addClass('form-control-sm');
+      $('#dataTable_info').addClass('text-info');
+      $('.paginate_button').addClass('btn btn-outline-dark').removeClass('paginate_button');
   }) 
 
   //Add new popup
@@ -52,6 +56,7 @@
             // assigning modal title from parameter
             $("#form-modal-body").html("<p>"+html1+"</p>"); // msg in modal body
             $("#form-modal").modal("show"); // show modal instead alert box
+            strawberry.tooltipToggler();
           }
         },
     });
@@ -204,5 +209,24 @@
       //Progress Bar
       $('.progress-bar').css('background-color', color);      
       $('.progress-bar').css('width', progressWidth);      
+  }
+
+  //SPEECH RECONGINITION
+  function startRecognition(inputId) {
+    var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
+
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+    recognition.start();
+
+    recognition.onresult = function(event) {
+      var _result = event.results[0][0].transcript;
+      $('#'+inputId).val(_result);
+      $('.form_submit').addClass('btn-flash');
+    };
+
+    recognition.onerror = function(event) {
+        console.log(event.error);
+    };
   }
 </script>

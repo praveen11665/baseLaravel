@@ -1,17 +1,17 @@
-<table class="table table-sm bg-white table-bordered shadow-sm mb-0" id="dataTable">
+<table class="table table-no-border shadow-sm" id="dataTable">
 	<thead>
 		<tr>
 			<th>Role Name</th>
 			<th>Created At</th>
-			<th>Action</th>
+			<th class="text-center">Action</th>
 		</tr>
 	</thead>
 	<tbody>
 		@foreach($roleData as $role)
-		<tr>
+		<tr class="hover-shadow">
 			<td>{{$role->role_name}}</td>
 			<td>{{ date('F j, Y h:i A', strtotime($role->created_at)) }}</td>
-			<td>
+			<td class="text-center">
 				<button class="btn btn-outline-primary flex-fill border-0" data-toggle="tooltip" title="Edit" onclick="addNewPop('{{route("role_form")}}', '{{$role->role_id}}', 'Edit Role')">
                   <i class="fas fa-pencil-alt"></i>
                 </button>

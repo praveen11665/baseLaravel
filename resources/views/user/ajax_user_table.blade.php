@@ -1,4 +1,4 @@
-<table class="table table-sm bg-white table-bordered shadow-sm mb-0" id="dataTable">
+<table class="table table-no-border shadow-sm mb-0" id="dataTable">
 <thead>
 	<tr>
 		<th>Name</th>

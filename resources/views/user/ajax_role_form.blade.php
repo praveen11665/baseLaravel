@@ -14,11 +14,12 @@
 <div class="row">
 	<div class="col-md-12">		
 		<form action="javascript:" data-action="{{ route('role_form') }}" method="post" id="ajaxModelForm" autocomplete="off">
-			<input type="hidden" name="role_id" id="role_id" value="{{$role_id}}">
+			<input type="hidden" name="role_id" id="role_id" value="{{$role_id}}" x-webkit-speech>
 			<div class="row">
 				<div class="col-md-12">
 					<label>Role Name</label>
 					<input type="text" class="form-control" name="role_name" id="role_name" value="{{$role_name}}">
+					<i class="fas fa-microphone shadow" data-toggle="tooltip" title="Alert, Set up your mic for speech recognition, It's working on HTTPS and localhost" onclick="startRecognition('role_name')"></i>
 					<span class="help-block">{{ isset($error) ? $error['0'] : '' }}</span>
 				</div>
 			</div>
@@ -29,5 +30,5 @@
 			</div>
 		</form>
 	</div>
-</div> 	
+</div> 
 @php(require_once(base_path().'\resources\views\common_js.blade.php'))

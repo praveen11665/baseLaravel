@@ -325,12 +325,11 @@
 }
 
 .table thead{
-    background: lightyellow !important;
-
+    //background: lightyellow !important;
 }
 
 .table tbody tr:nth-child(even){
-    background: #f3f7f9 !important;
+    //background: #f3f7f9 !important;
 }
 
 .border-bottom{
@@ -353,6 +352,70 @@
     border-radius: 2px;
 }
 
-#wrapper.toggled .breadcrumb-wrapper {
+/*#wrapper.toggled .breadcrumb-wrapper {
     top: 36px;
+}*/
+
+.breadcrumb-wrapper>.breadcrumb {
+    margin: 0px;
+    padding: .25rem 2rem .25rem .9rem;
+}
+
+
+/**** DATA TABLE BUTTON *****/
+.search-control-sm{
+    height: calc(1.5em + 0.5rem + 2px);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8203125rem;
+    line-height: 1.5;
+    border: 1px solid #ced4da;
+}
+
+.btn-paginate {
+    color: #fff;
+    border-color: rgb(40, 20, 131);
+    background: #281483;
+}
+
+.dataTables_wrapper .dataTables_paginate .btn-paginate {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 1.5em;
+    padding: 0.5em 1em;
+    margin-left: 2px;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    *cursor: hand;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    padding-top: 1.25em !important;
+}
+
+.fa-microphone{
+    float: right;
+    margin-right: 7px;
+    margin-top: -24px;
+    position: relative;
+    z-index: 2;
+    color: #281483;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/*.form-control:focus + .fa-microphone{
+  display: inline-block !important;
+}   */
+
+.hover-shadow:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  z-index: 2 !important;
+}
+
+button.close:hover {
+    background-color: transparent;
+    color :red;
 }
