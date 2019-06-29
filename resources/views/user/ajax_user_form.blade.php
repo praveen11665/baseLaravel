@@ -60,4 +60,4 @@
 		</form>
 	</div>
 </div> 	
-@php(require_once(base_path().'\resources\views\common_js.blade.php'))
+<script src="{{ asset('/js/common.js') }}"></script>

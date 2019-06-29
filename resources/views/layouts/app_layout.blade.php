@@ -54,9 +54,14 @@
   <script src="{{ asset('/js/strawberry.core.js') }}"></script>
   <script src="{{ asset('/js/strawberry.js') }}"></script>
 
+  <script src="{{ asset('/js/common.js') }}"></script>
+
   <!--DATATABLES-->
   <link href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
   <script src="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> 
+
+  <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 
   <script type="text/javascript">
    //Globally Set Web URL
@@ -179,6 +184,5 @@
   </div>
     
   <aside class="toast-wrapper"></aside>
-  @php(require_once(base_path().'\resources\views\common_js.blade.php'))
 </body>
 </html>
